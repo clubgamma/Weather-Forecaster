@@ -3,7 +3,7 @@
 **Elucidation for the following project:**
 
 Forecast the weather of different cities worldwide using the open weather free app. You are instructed to make a program which will ask the name of the city and will display the weather of the respective city.
-You can refer to different open projects from GitHub keenly observe them so that you come up with the most innovative way. Display of an efficient code will be appreciated
+You can refer to different open projects from GitHub keenly observe them so that you come up with the most innovative way. Display of an efficient code will be appreciated.
 
 Tech Stack to be used: Python
 
