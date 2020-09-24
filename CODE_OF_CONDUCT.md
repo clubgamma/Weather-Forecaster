@@ -51,7 +51,7 @@ In case of a Code of Conduct violation, actions community may take are:
 ## Guidelines for reporting incidents
 In case of a Code of Conduct violation, actions community may take are:
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the community lead at **gce@charusat.edu.in**. The community lead and core team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The core team is obligated to maintain confidentiality with regard to the reporter of an incident.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the community lead at **info.clubgamma@gmail.com**. The community lead and core team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The core team is obligated to maintain confidentiality with regard to the reporter of an incident.
 
 **Core Team** who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the management team of the community.
 
