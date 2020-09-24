@@ -9,7 +9,7 @@ Read the [Code of Conduct](https://github.com/clubgamma/code-of-conduct) before 
 - **Fork the repo**
 
 Firstly fork the repo to your own GitHub account by clicking the Fork button on the top-right corner. Still can’t find it, check the image below. 
-[IMAGE]
+![weather](https://user-images.githubusercontent.com/52206701/94161875-c7986880-fea3-11ea-8bef-9919cd9d97df.PNG)
 After the successful fork, you'll acknowledge a copy of this repo on your own.
  
   - **Clone the repo**
@@ -19,7 +19,7 @@ Now it's time to copy this repo to my own laptop/PC. To clone the repo you can w
         > git clone <REPO_LINK_FROM_YOUR_ACCOUNT>
     
 You can get the repo link from the Download section in the repo copied in your account. If you’re still facing problems check out the image below.
-[IMAGE]
+![image](https://user-images.githubusercontent.com/52206701/94184635-d42bb980-fec1-11ea-87d8-5a60239362f9.png)
 
   - **Set up remote repo**
 
@@ -37,6 +37,8 @@ If you don't see the "origin" remote, you can add it using the git command below
 - **It's Code Time now**
   
 First of all, make a folder named as your GitHub username which is compulsory. 
+![image](https://user-images.githubusercontent.com/52206701/94184858-2a006180-fec2-11ea-9bdc-8bec3d3d1f72.png)
+
 
 - After that start writing code inside that folder only and you know what you have to code. Create anything you want using Python only!!
 
@@ -51,9 +53,10 @@ First of all, make a folder named as your GitHub username which is compulsory.
         
   - **Let's finish this**
 - Go to your forked repo on GitHub website and refresh the page, you'll see something like the below image
-  [IMAGE]
+![image](https://user-images.githubusercontent.com/52206701/94185006-6633c200-fec2-11ea-9cb8-d3efd2713d20.png)
+
 - Click on pull-request and you will be redirected to another page where you will see something like below image 
-  [IMAGE]
+![image](https://user-images.githubusercontent.com/52206701/94185055-73e94780-fec2-11ea-8bcf-8eb838a2fad2.png)
   
 - After that you have to write your GitHub username as the title of your pull-request and describe your work if you want and that's it!! Create a pull-request by clicking the button
 Also add the below 2 lines in the description. It is compulsory for successful submission.
@@ -62,7 +65,7 @@ Also add the below 2 lines in the description. It is compulsory for successful s
         
  - [X] I have followed all the steps of submission properly.
         
-[Image]
+![image](https://user-images.githubusercontent.com/52206701/94185097-81063680-fec2-11ea-8fbc-766fbb363e73.png)
 
 **Woohoo!! Congratulations on making your open source contribution🎉🎉**
 **Wait for some time to get your PR merged by our team**
