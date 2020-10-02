@@ -79,9 +79,6 @@ Also add the below 2 lines in the description. It is compulsory for successful s
  - [X] I have read the Code Of Conduct.
         
  - [X] I have followed all the steps of submission properly.
- 
-        
-![image](https://user-images.githubusercontent.com/52206701/94185097-81063680-fec2-11ea-8fbc-766fbb363e73.png)
 
 
 **Woohoo!! Congratulations on making your open source contribution🎉**
