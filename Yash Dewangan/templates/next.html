@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhai Bhai</title>
+    <script src="https://kit.fontawesome.com/df67bacc25.js" crossorigin="anonymous"></script>
+
+    <!--<link rel="stylesheet" href="../static/css/main.css" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="#">
+        Check Weather
+      </a>
+
+      <a class="navbar-item" href="#">
+      Check weather forecast 
+      </a>
+
+      
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="control">
+            <a class="button is-success is-inverted " href="#">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Download</span>
+            </a>       
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="hero-body">
+    <div class="container has-text-centered is-centered">
+        <div class="column is-6 is-offset-3">
+            <h1 class="title">
+                Check Weather
+            </h1>
+            <h2 class="subtitle">
+                
+            </h2>
+            <div class="box">
+                <div class="field is-grouped  is-grouped-centered"  id="myselect1">
+                    <form action="/city" method="POST">
+                     
+                      <div class="control ">
+                        <input class="input" type="text" name="city" placeholder="City">
+                      </div>
+                      <br>
+                      <div class="control">
+                        <button class="button is-primary" >Submit</button>
+                      </div>
+                      
+                      
+                    </form>  
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section " id="success" >
+  <div class="container">
+      <div class="columns">
+          <div class="column is-offset-4 is-4 " > 
+            
+           
+            
+              <div class="box " >
+                  <article class="media">
+                      <div class="media-left">
+                        
+                          <figure class="image is-50x50">
+                              <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image" >
+                          </figure>
+                      </div>
+                      <div class="media-content">
+                          <div class="content" >
+                              <p>
+                                  <span class="title" >{{ weather.city }}</span>
+                                  <br>
+                                  <span class="subtitle">{{ weather.temperature }} K</span>
+                                  <br> {{ weather.description }}
+                              </p>
+                          </div>
+                      </div>
+                  </article>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</section>
+
+</body>
+
+
+
+</html>
