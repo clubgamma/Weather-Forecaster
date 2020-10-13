@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Forecaster</title>
+    <script src="https://kit.fontawesome.com/df67bacc25.js" crossorigin="anonymous"></script>
+
+    <!--<link rel="stylesheet" href="../static/css/main.css" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+        <h1 class="title">
+            Check Weather
+        </h1>
+    </a>
+
+    
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">
+        Check Weather
+      </a>
+
+      <a class="navbar-item" href="/forecast">
+      Check weather forecast 
+      </a>
+
+      
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="control">
+            <a class="button is-success is-inverted " href="#">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Download</span>
+            </a>       
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="hero-body">
+    <div class="container has-text-centered is-centered">
+        <div class="column is-6 is-offset-3">
+            <h1 class="title">
+                Check Weather
+            </h1>
+            <h2 class="subtitle">
+                
+            </h2>
+            <div class="box">
+                <div class="field is-grouped  is-grouped-centered"  id="myselect1">
+                    <form action="/forecastcity" method="POST">
+                     
+                      <div class="control ">
+                        <input class="input" type="text" name="city" placeholder="City">
+                      </div>
+                      <br>
+                      <div class="control">
+                        <button class="button is-primary" >Submit</button>
+                      </div>
+                      
+                      
+                    </form>  
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<section class="section "id="success" >
+    <div class="container ">
+        <div class="has-text-centered is-centered">
+            <h1 class="title">
+                CITY - {{weatherforecast.city}}
+            </h1>
+        </div>
+        <br>
+        <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Serial No</th>
+                <th>Icon</th>
+                <th>Date & Time</th>
+                
+                <th>Temperature</th>
+                <th>Feel Temperature</th>
+                <th>Max Temperature</th>
+                <th>Min Temperature</th>
+                
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Serial No</th>
+                <th>Icon</th>
+                <th>Date & Time</th>
+                <th>Temperature</th>
+                <th>Feel Temperature</th>
+                <th>Max Temperature</th>
+                <th>Min Temperature</th>
+                
+                
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                
+                <th>1</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon0}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime0}}</td>
+                <td>{{weatherforecast.temperature0}}</td>
+                <td>{{weatherforecast.feel_temp0}}</td>
+                <td>{{weatherforecast.max_temp0}}</td>
+                <td>{{weatherforecast.min_temp0}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>2</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon1}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime1}}</td>
+                <td>{{weatherforecast.temperature1}}</td>
+                <td>{{weatherforecast.feel_temp1}}</td>
+                <td>{{weatherforecast.max_temp1}}</td>
+                <td>{{weatherforecast.min_temp1}}</td>
+                
+              </tr>
+
+              <tr>
+                
+                <th>3</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon2}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime2}}</td>
+                <td>{{weatherforecast.temperature2}}</td>
+                <td>{{weatherforecast.feel_temp2}}</td>
+                <td>{{weatherforecast.max_temp2}}</td>
+                <td>{{weatherforecast.min_temp2}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>4</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon3}}.png" alt="Image" >
+                  </figure>
+                </td>
+                
+                <td>{{weatherforecast.DateTime3}}</td>
+                <td>{{weatherforecast.temperature3}}</td>
+                <td>{{weatherforecast.feel_temp3}}</td>
+                <td>{{weatherforecast.max_temp3}}</td>
+                <td>{{weatherforecast.min_temp3}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>5</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon4}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime4}} </td>
+                <td>{{weatherforecast.temperature4}}</td>
+                <td>{{weatherforecast.feel_temp4}}</td>
+                <td>{{weatherforecast.max_temp4}}</td>
+                <td>{{weatherforecast.min_temp4}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>6</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon5}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime5}} </td>
+                <td>{{weatherforecast.temperature5}}</td>
+                <td>{{weatherforecast.feel_temp5}}</td>
+                <td>{{weatherforecast.max_temp5}}</td>
+                <td>{{weatherforecast.min_temp5}}</td>
+                
+              </tr>
+              
+              <tr>
+                
+                <th>7</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon6}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime6}}</td>
+                <td>{{weatherforecast.temperature6}}</td>
+                <td>{{weatherforecast.feel_temp6}}</td>
+                <td>{{weatherforecast.max_temp6}}</td>
+                <td>{{weatherforecast.min_temp6}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>8</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon7}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime7}}</td>
+                <td>{{weatherforecast.temperature7}}</td>
+                <td>{{weatherforecast.feel_temp7}}</td>
+                <td>{{weatherforecast.max_temp7}}</td>
+                <td>{{weatherforecast.min_temp7}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>9</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon8}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime8}}</td>
+                <td>{{weatherforecast.temperature8}}</td>
+                <td>{{weatherforecast.feel_temp8}}</td>
+                <td>{{weatherforecast.max_temp8}}</td>
+                <td>{{weatherforecast.min_temp8}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>10</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon9}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime9}}</td>
+                <td>{{weatherforecast.temperature9}}</td>
+                <td>{{weatherforecast.feel_temp9}}</td>
+                <td>{{weatherforecast.max_temp9}}</td>
+                <td>{{weatherforecast.min_temp9}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>11</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon10}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime10}}</td>
+                <td>{{weatherforecast.temperature10}}</td>
+                <td>{{weatherforecast.feel_temp10}}</td>
+                <td>{{weatherforecast.max_temp10}}</td>
+                <td>{{weatherforecast.min_temp10}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>12</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon11}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime11}}</td>
+                <td>{{weatherforecast.temperature11}}</td>
+                <td>{{weatherforecast.feel_temp11}}</td>
+                <td>{{weatherforecast.max_temp11}}</td>
+                <td>{{weatherforecast.min_temp11}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>13</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon12}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime12}}</td>
+                <td>{{weatherforecast.temperature12}}</td>
+                <td>{{weatherforecast.feel_temp12}}</td>
+                <td>{{weatherforecast.max_temp12}}</td>
+                <td>{{weatherforecast.min_temp12}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>14</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon13}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime13}}</td>
+                <td>{{weatherforecast.temperature13}}</td>
+                <td>{{weatherforecast.feel_temp13}}</td>
+                <td>{{weatherforecast.max_temp13}}</td>
+                <td>{{weatherforecast.min_temp13}}</td>
+                
+              </tr>
+              
+              <tr>
+                
+                <th>15</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon14}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime14}}</td>
+                <td>{{weatherforecast.temperature14}}</td>
+                <td>{{weatherforecast.feel_temp14}}</td>
+                <td>{{weatherforecast.max_temp14}}</td>
+                <td>{{weatherforecast.min_temp14}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>16</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon15}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime15}}</td>
+                <td>{{weatherforecast.temperature15}}</td>
+                <td>{{weatherforecast.feel_temp15}}</td>
+                <td>{{weatherforecast.max_temp15}}</td>
+                <td>{{weatherforecast.min_temp15}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>17</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon16}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime16}}</td>
+                <td>{{weatherforecast.temperature16}}</td>
+                <td>{{weatherforecast.feel_temp16}}</td>
+                <td>{{weatherforecast.max_temp16}}</td>
+                <td>{{weatherforecast.min_temp16}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>18</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon17}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime17}}</td>
+                <td>{{weatherforecast.temperature17}}</td>
+                <td>{{weatherforecast.feel_temp17}}</td>
+                <td>{{weatherforecast.max_temp17}}</td>
+                <td>{{weatherforecast.min_temp17}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>19</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon18}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime18}}</td>
+                <td>{{weatherforecast.temperature18}}</td>
+                <td>{{weatherforecast.feel_temp18}}</td>
+                <td>{{weatherforecast.max_temp18}}</td>
+                <td>{{weatherforecast.min_temp18}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>20</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon19}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime19}}</td>
+                <td>{{weatherforecast.temperature19}}</td>
+                <td>{{weatherforecast.feel_temp19}}</td>
+                <td>{{weatherforecast.max_temp19}}</td>
+                <td>{{weatherforecast.min_temp19}}</td>
+                
+              </tr>
+
+              
+
+
+              <tr>
+                
+                <th>21</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon20}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime20}}</td>
+                <td>{{weatherforecast.temperature20}}</td>
+                <td>{{weatherforecast.feel_temp20}}</td>
+                <td>{{weatherforecast.max_temp20}}</td>
+                <td>{{weatherforecast.min_temp20}}</td>
+                
+              </tr>
+
+
+
+              <tr>
+                
+                <th>22</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon21}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime21}}</td>
+                <td>{{weatherforecast.temperature21}}</td>
+                <td>{{weatherforecast.feel_temp21}}</td>
+                <td>{{weatherforecast.max_temp21}}</td>
+                <td>{{weatherforecast.min_temp21}}</td>
+                
+              </tr>
+
+
+
+              <tr>
+                
+                <th>23</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon22}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime22}}</td>
+                <td>{{weatherforecast.temperature22}}</td>
+                <td>{{weatherforecast.feel_temp22}}</td>
+                <td>{{weatherforecast.max_temp22}}</td>
+                <td>{{weatherforecast.min_temp22}}</td>
+                
+              </tr>
+
+
+
+              <tr>
+                
+                <th>24</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon23}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime23}}</td>
+                <td>{{weatherforecast.temperature23}}</td>
+                <td>{{weatherforecast.feel_temp23}}</td>
+                <td>{{weatherforecast.max_temp23}}</td>
+                <td>{{weatherforecast.min_temp23}}</td>
+                
+              </tr>
+
+
+
+              <tr>
+                
+                <th>25</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon24}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime24}}</td>
+                <td>{{weatherforecast.temperature24}}</td>
+                <td>{{weatherforecast.feel_temp24}}</td>
+                <td>{{weatherforecast.max_temp24}}</td>
+                <td>{{weatherforecast.min_temp24}}</td>
+                
+              </tr>
+
+
+
+              <tr>
+                
+                <th>26</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon25}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime25}}</td>
+                <td>{{weatherforecast.temperature25}}</td>
+                <td>{{weatherforecast.feel_temp25}}</td>
+                <td>{{weatherforecast.max_temp25}}</td>
+                <td>{{weatherforecast.min_temp25}}</td>
+                
+              </tr>
+
+              <tr>
+                
+                <th>27</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon26}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime26}}</td>
+                <td>{{weatherforecast.temperature26}}</td>
+                <td>{{weatherforecast.feel_temp26}}</td>
+                <td>{{weatherforecast.max_temp26}}</td>
+                <td>{{weatherforecast.min_temp26}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>28</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon27}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime27}}</td>
+                <td>{{weatherforecast.temperature27}}</td>
+                <td>{{weatherforecast.feel_temp27}}</td>
+                <td>{{weatherforecast.max_temp27}}</td>
+                <td>{{weatherforecast.min_temp27}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>29</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon28}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime28}}</td>
+                <td>{{weatherforecast.temperature28}}</td>
+                <td>{{weatherforecast.feel_temp28}}</td>
+                <td>{{weatherforecast.max_temp28}}</td>
+                <td>{{weatherforecast.min_temp28}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>30</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon29}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime29}}</td>
+                <td>{{weatherforecast.temperature29}}</td>
+                <td>{{weatherforecast.feel_temp29}}</td>
+                <td>{{weatherforecast.max_temp29}}</td>
+                <td>{{weatherforecast.min_temp29}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>31</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon30}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime30}}</td>
+                <td>{{weatherforecast.temperature30}}</td>
+                <td>{{weatherforecast.feel_temp30}}</td>
+                <td>{{weatherforecast.max_temp30}}</td>
+                <td>{{weatherforecast.min_temp30}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>32</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon31}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime31}}</td>
+                <td>{{weatherforecast.temperature31}}</td>
+                <td>{{weatherforecast.feel_temp31}}</td>
+                <td>{{weatherforecast.max_temp31}}</td>
+                <td>{{weatherforecast.min_temp31}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>33</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon32}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime32}}</td>
+                <td>{{weatherforecast.temperature32}}</td>
+                <td>{{weatherforecast.feel_temp32}}</td>
+                <td>{{weatherforecast.max_temp32}}</td>
+                <td>{{weatherforecast.min_temp32}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>34</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon33}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime33}}</td>
+                <td>{{weatherforecast.temperature33}}</td>
+                <td>{{weatherforecast.feel_temp33}}</td>
+                <td>{{weatherforecast.max_temp33}}</td>
+                <td>{{weatherforecast.min_temp33}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>35</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon34}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime34}}</td>
+                <td>{{weatherforecast.temperature34}}</td>
+                <td>{{weatherforecast.feel_temp34}}</td>
+                <td>{{weatherforecast.max_temp34}}</td>
+                <td>{{weatherforecast.min_temp34}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>36</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon35}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime35}}</td>
+                <td>{{weatherforecast.temperature35}}</td>
+                <td>{{weatherforecast.feel_temp35}}</td>
+                <td>{{weatherforecast.max_temp35}}</td>
+                <td>{{weatherforecast.min_temp35}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>37</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon36}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime36}}</td>
+                <td>{{weatherforecast.temperature36}}</td>
+                <td>{{weatherforecast.feel_temp36}}</td>
+                <td>{{weatherforecast.max_temp36}}</td>
+                <td>{{weatherforecast.min_temp36}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>38</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon37}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime37}}</td>
+                <td>{{weatherforecast.temperature37}}</td>
+                <td>{{weatherforecast.feel_temp37}}</td>
+                <td>{{weatherforecast.max_temp37}}</td>
+                <td>{{weatherforecast.min_temp37}}</td>
+                
+              </tr>
+              <tr>
+                
+                <th>39</th>
+                <td>
+                  <figure class="image is-50x50 is-centered">
+                    <img src="http://openweathermap.org/img/w/{{weatherforecast.icon38}}.png" alt="Image" >
+                  </figure>
+                </td>
+                <td>{{weatherforecast.DateTime38}}</td>
+                <td>{{weatherforecast.temperature38}}</td>
+                <td>{{weatherforecast.feel_temp38}}</td>
+                <td>{{weatherforecast.max_temp38}}</td>
+                <td>{{weatherforecast.min_temp38}}</td>
+                
+              </tr>
+              
+              
+
+              
+             
+            </tbody>
+          </table>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="text">
+      Website made with <i class="fas fa-heart"></i> by <a href="#">Yash Dewangan</a>. The source code is licensed
+      <a href="#">MIT</a>. 
+    </p>
+  </div>
+</footer> 
+
+</body>
+
+<script src="/Yash Dewangan/static/js/script.js"></script>
+</html>
